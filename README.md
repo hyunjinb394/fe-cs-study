@@ -1,14 +1,14 @@
-# ppujjak_FE-CS-Study
+# FE-CS-Study
 since 2024.03.07 - 
 
-# Table of Contents
+## Table of Contents
 
-# About
+## About
 
-## Repository Rules
+### Repository Rules
 
-## Collaborator
+### Collaborator
 
-## Reference
+### Reference
 
 
