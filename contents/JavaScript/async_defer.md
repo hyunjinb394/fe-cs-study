@@ -1,5 +1,5 @@
-# 📚 대제목
-Script 태그의 async, defer 
+# 📚 script 태그에서 Async와 Defer의 차이
+Script 태그의 Async, Defer 속성이 필요한 이유와 속성 간의 차이
 
 ## 📖 DOM이 Script 태그를 만나면?
 - DOM이 생성될때 Script 태그를 만나면 DOM 생성을 멈추고 Script를 실행
