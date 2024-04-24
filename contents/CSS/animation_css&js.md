@@ -49,6 +49,7 @@
 ## 🔍 예시코드
 
 ```CSS
+/* <CSS> */
 @keyframes move {
   from {
     transform: translateX(0);
@@ -64,6 +65,7 @@
 ```
 
 ```JS
+// <JavaScript>
 let start;
 const element = document.getElementById("MyElement");
 
