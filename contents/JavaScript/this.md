@@ -15,7 +15,10 @@
 - new 키워드로 함수 호출 시 함수는 생성자 함수로 동작
 - 이때 this는 새로 생성된 객체를 가리킴
 
-**this가 binding 되는 객체를 변경하고 싶을 때 call, apply, bind를 사용**
+</br>
+
+
+**⭐ this가 binding 되는 객체를 변경하고 싶을 때 call, apply, bind를 사용**
 
 </br>
 
