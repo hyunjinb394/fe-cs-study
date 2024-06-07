@@ -27,7 +27,7 @@
 
 ### 📍 단점
 
-- 계속해서 요소의 위치를 재계산하기 때문에, 60fps가 유지되지 않음
+- 계속해서 요소의 위치를 재계산하기 때문에, 60fps가 유지되지 않음(RAF API 사용으로 해결 가능)
 - 복잡성: CSS에 비해 애니메이션을 작성하고 이해하는 데 더 많은 시간과 노력이 들 수 있음
   </br>
 
@@ -87,3 +87,12 @@ window.requestAnimationFrame(step);
 </br>
 
 ## 🗂️ 참고
+
+[CSS 애니메이션과 JavaScript 애니메이션의 차이점]
+https://1yoouoo.tistory.com/35
+
+[CSS 애니메이션과 JS 애니메이션의 차이점]
+https://velog.io/@hoho_0815/CSS-%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98%EA%B3%BC-JS-%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90
+
+[CSS와 JS 애니메이션의 차이점]
+https://cansweep.tistory.com/330

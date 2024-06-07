@@ -47,7 +47,7 @@
 
 
 /* 태그 선택자 */
-/* CSS */
+/* <CSS> */
 p { background: yellowgreen; color: darkgreen; }
 
 <!-- HTML -->
@@ -56,7 +56,7 @@ p { background: yellowgreen; color: darkgreen; }
 
 
 /* 클래스 선택자 */
-/* CSS */
+/* <CSS> */
 .class1 { background: yellowgreen; color: darkgreen; }
 div.class2 { background: darkgreen; color: yellowgreen; }
 
@@ -67,7 +67,7 @@ div.class2 { background: darkgreen; color: yellowgreen; }
 
 
 /* ID 선택자 */
-/* CSS */
+/* <CSS> */
 #id1 { background: yellowgreen; color: darkgreen; }
 div#id2 { background: darkgreen; color: yellowgreen; }
 
@@ -78,7 +78,7 @@ div#id2 { background: darkgreen; color: yellowgreen; }
 
 
 /* 복합 선택자 */
-/* CSS */
+/* <CSS> */
 /* 하위 선택자 */
 section ul { border: 1px dotted black; }
 
@@ -93,7 +93,7 @@ h1~ul { background: darkgreen; color: yellowgreen; }
 
 
 /* 속성 선택자 */
-/* CSS */
+/* <CSS> */
 /* E[attr]형식 */
 a[href] { background: yellowgreen; color: black; }
 
@@ -122,3 +122,14 @@ UI요소 상태 선택자
 </br>
 
 ## 🗂️ 참고
+
+[모던 자바스크립트 Deep Dive] 2.2 셀렉터
+
+[CSS Selector가 어떤 원리로 동작하는지 설명하시오]
+https://github.com/uiandwe/TIL/blob/master/CSS/CSS%20Selector%EA%B0%80%20%EC%96%B4%EB%96%A0%ED%95%9C%20%EC%9B%90%EB%A6%AC%EB%A1%9C%20%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94%EC%A7%80%20%EC%84%A4%EB%AA%85%ED%95%98%EC%8B%9C%EC%98%A4.md
+
+[CSS Selector의 작동원리 + CSS 적용 우선순위]
+https://velog.io/@fejigu/CSS-selector%EC%9D%98-%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC-CSS-%EC%A0%81%EC%9A%A9-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84
+
+[CSS: 선택자(Selector)의 이해]
+https://www.nextree.co.kr/p8468/
