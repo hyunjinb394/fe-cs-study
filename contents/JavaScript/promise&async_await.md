@@ -57,86 +57,77 @@
 - promise의 후속 처리 메서드 없이, 비동기 처리를 동기처리처럼 동작하도록 구현
 - Async: 암묵적으로 반환값을 resolve하는 promise 반환
 - Await: promise가 settled 상태가 되면 promise가 resolve한 처리 결과 반환
+- 'try-catch' 블록을 사용으로 보다 직관적인 에러 처리 -> 오류 추적 및 디버깅 용이
 
 ## 🔍 예시코드
 
 ```js
 // <JavaScript>
-// 기본예시
-function findName(name) {
-  console.log("what is your name?"); //--- (1)
-  console.log("...finding"); //--- (2)
-  setTimeout(() => {
-    console.log("your name is " + name); //--- (3)
-  }, 3000);
-  console.log("right?"); //--- (4)
-}
-
-findName("홍길동");
-
 // callback 사용예시
-function findName(name) {
-  if (!name) return console.log("Sorry, I don't know you");
-  console.log("your name is " + name); //--- (3)
-  console.log("right?"); //--- (4)
-}
-
-function delay(id, cb) {
-  console.log("what is your name?"); //--- (1)
-  console.log("...finding"); //--- (2)
+function fetchData(callback) {
   setTimeout(() => {
-    const data = { 1: "홍길동", 2: "스펀지밥" };
-    cb(data[id]);
-  }, 3000);
+    const data = { id: 1, name: "John Doe" };
+    callback(null, data);
+  }, 1000);
 }
 
-delay(1, findName);
+function processData(error, data) {
+  if (error) {
+    console.error("Error:", error);
+    return;
+  }
+  console.log("Data:", data);
+}
+
+// fetchData 함수를 호출하고 콜백으로 processData 함수를 전달합니다.
+fetchData(processData);
 
 // promise 사용예시
-const findName = (id) =>
-  new Promise((resolve, reject) => {
-    console.log("what is your name?"); //--- (1)
-    console.log("...finding"); //--- (2)
-    setTimeout(() => {
-      const data = { 1: "홍길동", 2: "스펀지밥" };
-      if (typeof id !== "number")
-        return reject(new Error("Id type is number!"));
-      --ㄱ;
-      if (!data[id]) return reject("Sorry, I don't know you");
-      resolve("your name is " + data[id]);
-    }, 3000);
-  })
-    .then((data) => {
-      console.log(data);
-      console.log("right?");
-    }, console.log)
-    .catch(console.log);
-
-// promise와 async/await 사용예시
-const promise = function (id) {
+function fetchData() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const data = { 1: "홍길동", 2: "스펀지밥" };
-      if (typeof id !== "number")
-        return reject(new Error("Id type is number!")); //--- (3)
-      if (!data[id]) return reject("Sorry, I don't know you"); //---(3)
-      resolve("your name is " + data[id]); //---(3)
-    }, 3000);
+      const data = { id: 1, name: "John Doe" };
+      resolve(data);
+    }, 1000);
   });
-};
+}
 
-async function findName(id) {
+function processData(data) {
+  console.log("Data:", data);
+}
+
+// fetchData 함수는 Promise를 반환합니다.
+fetchData()
+  .then(processData)
+  .catch((error) => console.error("Error:", error));
+
+// promise와 async/await 사용예시
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = { id: 1, name: "John Doe" };
+      resolve(data);
+    }, 1000);
+  });
+}
+
+async function processData() {
   try {
-    console.log("what is your name?"); //--- (1)
-    console.log("...finding"); //--- (2)
-    const finded = await promise(id);
-    console.log(finded); //---(3)
-  } catch (err) {
-    console.log(err); //---(3)
+    const data = await fetchData();
+    console.log("Data:", data);
+  } catch (error) {
+    console.error("Error:", error);
   }
 }
+
+// processData 함수 호출
+processData();
 ```
 
 </br>
 
 ## 🗂️ 참고
+
+[모던 자바스크립트 Deep Dive 42, 46장]
+https://velog.io/@rekoding/JavaScript-%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-Deep-Dive-46%EC%9E%A5-%EC%A0%9C%EB%84%88%EB%A0%88%EC%9D%B4%ED%84%B0%EC%99%80-asyncawait
+https://velog.io/@zivivle/%EB%AA%A8%EB%8D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%94%A5%EB%8B%A4%EC%9D%B4%EB%B8%8C-42%EC%9E%A5-%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D

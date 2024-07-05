@@ -28,3 +28,6 @@
 - this 값 설정
 
 ## 🗂️ 참고
+
+[모던 자바스크립트 딥다이브 23장]
+https://hong-p.github.io/javascript/javascript-deepdive-ch23/

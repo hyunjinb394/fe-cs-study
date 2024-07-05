@@ -22,41 +22,74 @@
 ```js
 // <JavaScript>
 // 1. nothing
-var inside1 = $(".inside-1");
-var thing1 = $(".thing-1");
-var count1 = $(".count-1");
-inside1.on("scroll", function () {
-  thing1.css("top", inside1[0].scrollTop);
-  count1.html(parseInt(count1.html()) + 1);
-});
+function handleEvent(event) {
+  console.log("Input event:", event.target.value);
+}
+
+const input = document.createElement("input");
+input.type = "text";
+input.placeholder = "Type something...";
+input.addEventListener("input", handleEvent);
+
+document.body.appendChild(input);
 
 // 2. Throttle
-var inside2 = $(".inside-2");
-var thing2 = $(".thing-2");
-var count2 = $(".count-2");
-inside2.on(
-  "scroll",
-  _.throttle(function () {
-    thing2.css("top", inside2[0].scrollTop);
-    count2.html(parseInt(count2.html()) + 1);
-  }, 150)
-);
+function throttle(func, limit) {
+  let lastFunc;
+  let lastRan;
+  return function (...args) {
+    const context = this;
+    if (!lastRan) {
+      func.apply(context, args);
+      lastRan = Date.now();
+    } else {
+      clearTimeout(lastFunc);
+      lastFunc = setTimeout(function () {
+        if (Date.now() - lastRan >= limit) {
+          func.apply(context, args);
+          lastRan = Date.now();
+        }
+      }, limit - (Date.now() - lastRan));
+    }
+  };
+}
+
+function handleThrottledEvent(event) {
+  console.log("Throttled input event:", event.target.value);
+}
+
+const inputThrottle = document.createElement("input");
+inputThrottle.type = "text";
+inputThrottle.placeholder = "Type something...";
+inputThrottle.addEventListener("input", throttle(handleThrottledEvent, 1000));
+
+document.body.appendChild(inputThrottle);
 
 // 3. Debounce
-var inside3 = $(".inside-3");
-var thing3 = $(".thing-3");
-var count3 = $(".count-3");
-inside3.on(
-  "scroll",
-  _.debounce(function () {
-    thing3.css("top", inside3[0].scrollTop);
-    count3.html(parseInt(count3.html()) + 1);
-  }, 100)
-);
+function debounce(func, delay) {
+  let timeout;
+  return function (...args) {
+    const context = this;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), delay);
+  };
+}
+
+function handleDebouncedEvent(event) {
+  console.log("Debounced input event:", event.target.value);
+}
+
+const inputDebounce = document.createElement("input");
+inputDebounce.type = "text";
+inputDebounce.placeholder = "Type something...";
+inputDebounce.addEventListener("input", debounce(handleDebouncedEvent, 1000));
+
+document.body.appendChild(inputDebounce);
 ```
 
 </br>
 
 ## 🗂️ 참고
 
+[디바운스와 스로틀 그리고 차이점]
 https://webclub.tistory.com/607
