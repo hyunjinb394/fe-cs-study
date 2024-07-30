@@ -19,7 +19,7 @@ Script 태그의 Async, Defer 속성이 필요한 이유와 속성 간의 차이
 - DOM이 모두 로드된 경우 발생하는 DOMContentLoaded 이벤트 콜백으로 로드를 보장할 수 없음
 - async 속성은 Script가 독립적인 역할을 하는 Goolge Analytics 같은 서드 파티 Script 등을 통합할때 유용
 - DOM에 직접 접근하지 않는 Script일때 async가 효과적
-- async Script는 다른 스크립트에 `의존적이지 않는 스크립트를 독립적으로 실행`할때 효과적
+- async Script는 다른 스크립트에 `의존적이지 않은 스크립트를 독립적으로 실행`할때 효과적
 
 </br> 
 
