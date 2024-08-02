@@ -224,7 +224,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 ```
-- React hook에는 static getDerivedStateFromError() 나 componentDidCatch()와 같은 메소드가 없기 때문에 공식 문서에는 class형 컴포넌트 사용 예시만 존재
+- React hook에는 static getDerivedStateFromError() 나 componentDidCatch()와 같은 메소드가 없기 때문에 리액트 공식 문서에는 class형 컴포넌트 사용 예시만 존재
 - 클래스 형으로 작성된 에러바운더리는 대부분 함수형으로 작성된 리액트 프로젝트에 일관성 해침
 
 </br>
