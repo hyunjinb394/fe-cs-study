@@ -11,6 +11,7 @@
 - 컴포넌트 로직을 재사용하기 위한 리액트의 고급 기술
 - HOC는 React API의 일부가 아니며 구성적 특성에서 나오는 패턴
 - 컴포넌트는 props를 UI로 변환하는 반면, 고차 컴포넌트는 컴포넌트를 새로운 컴포넌트로 변환
+- with 접두어 붙이는 네이밍 컨벤션 존재
 
 ## 🔍 예시코드
 ```js
@@ -112,11 +113,13 @@ export default withLoadingIndicator(MyComponent);
 ### 📍 정리
 
 - HOC를 사용하면 코드 재사용성, 유연성, 가독성 측면에서 이점
+- depth가 깊어지면서 구조 복잡성 증가, props 네이밍 중복 가능성 등의 단점
 - 과도하게 코드가 복잡해지지 않도록 적절한 수준에서 사용 필요
-- React hooks 등장 후 커스텀 hook 사용하는 경우 많음
+- React hooks 등장 후 상기 문제 해결위해 커스텀 hook 사용하는 경우 많음
 
 </br>
 
 
 ## 🗂️ 참고
-[Velog - 고차컴포넌트란?](https://velog.io/@osw7875/%EA%B3%A0%EC%B0%A8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8HOC-Higher-Order-Component%EB%9E%80)
+[Velog - 고차컴포넌트란?](https://velog.io/@osw7875/%EA%B3%A0%EC%B0%A8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8HOC-Higher-Order-Component%EB%9E%80) </br>
+[Tistory - 고차 컴포넌트(HOC)와 Hooks](https://ostarblog.tistory.com/12)

@@ -29,26 +29,10 @@ console.log(Object.prototype.__proto__ === null); // true
 
 </br> 
 
-![prototype1](https://private-user-images.githubusercontent.com/142391557/325260652-25f30d2b-befd-47a4-88d6-9106155e7bf4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM5NjkzMDEsIm5iZiI6MTcxMzk2OTAwMSwicGF0aCI6Ii8xNDIzOTE1NTcvMzI1MjYwNjUyLTI1ZjMwZDJiLWJlZmQtNDdhNC04OGQ2LTkxMDYxNTVlN2JmNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDI0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQyNFQxNDMwMDFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05OTRiNzhjMjNmNDRiYmE1YTUyYWIwZDNlMWQ3MDMzNDNiYWRjYmFlODg1ZmE3NzNiOWU5NjRhMTQxODVlNWYzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.UCa8nSvzCY9KFBTBFyNn73Y7xr6FEK1JpA-Ow2hZRDw)
+![prototype1](https://blog.kakaocdn.net/dn/44Htf/btrB7Ojbi1b/lj5wk0vY36VEridj1FVAV0/img.png)
 
 - [[Prototype]]은 모든 객체에 존재하는 내부 슬롯
 - 프로토타입 체인 무한 루프 방지 위해 직접 접근 X
-
-</br>
-
-## 📖 대주제
-### 📍 소주제
-- 내용
-- 내용
-
-</br> 
-
-## 🔍 예시코드
-```js
-function sayHi () {
-  console.log("hello world);
-  }
-```
 
 </br>
 
