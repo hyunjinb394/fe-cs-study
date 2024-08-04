@@ -2,13 +2,21 @@
 
 
 ## 📖 useEffect 란?
+- 함수 실행 시, 외부 존재 값이나 상태를 변경시키는 `Side-Effect`를 처리하기 위해 사용
 - 컴포넌트가 렌더링 될 때 마다 특정 작업을 실행할 수 있도록 해주는 React hook
-- mount / unmount / update 되었을 때 특정 작업 처리
 - 클래스형 컴포넌트에서 사용 가능했던 `생명주기 메소드`를 함수형 컴포넌트에서 사용 
 
 </br>
 
 ![useEffect](https://blog.kakaocdn.net/dn/J6VPG/btreOs3fnFB/J3PD4pk5vQfiHtSw0BKA51/img.png)
+
+</br>
+
+## 📖 Side-Effect 란?
+- 리액트 컴포넌트가 외부 요소들과 상호작용하며 발생하는 예측 어려운 결과
+- 백엔드 서버로의 데이터 요청
+- document나 window 같은 브라우저 API 상호작용
+- setTimeout 또는 setInterval 같은 타이밍 함수 사용
 
 </br>
 
@@ -50,6 +58,8 @@ useEffect(() => {
 ### 📍 사용 규칙
 
 - useEffect 안에서 사용하는 상태나 props가 있다면 deps 자리에 기입
+- useEffect 내부에서 state 업데이트 시 무한루프 발생 주의 (의존성 배열 필요)
+- 반복문, 조건문 혹은 중첩된 함수 내에서 호출 지양
 
 </br>
 
