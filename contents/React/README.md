@@ -23,3 +23,9 @@
 [🗨️ 리액트의 요소(Element)와 컴포넌트(Component)의 차이점은 무엇인가요?](element_component.md)
 
 [🗨️ React Router에 대해 설명해주세요.](react_router.md)
+
+[🗨️ React의 라이프 사이클에 대해 설명해주세요.](react_lifecycle.md)
+
+[🗨️ 제어 컴포넌트와 비제어 컴포넌트에 대해 설명해주세요.](controlled&uncontrolled_component.md)
+
+[🗨️ 클라이언트, 서버 상태 관리 비교 후 각각의 라이브러리에 대해서 설명해주세요.](state_management_library.md)

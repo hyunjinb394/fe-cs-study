@@ -10,8 +10,8 @@ since 2024.03.07
 
 ## Table of Contents
 ### 🗒️CSS
-### [🗒️JavaScript](https://github.com/hyunjinb394/cs-study/tree/main/contents/JavaScript#readme)
-### [🗒️React](https://github.com/hyunjinb394/cs-study/tree/main/contents/React#readme)
+### [🗒️JavaScript](contents/JavaScript#readme)
+### [🗒️React](contents/React#readme)
 ### 🗒️네트워크
 
 ## Collaborator
