@@ -23,6 +23,13 @@
 - 데이터 단위는 `패킷`, 전송주소는 `IP`
 - 라우터의 라우팅 테이블을 통해 데이터 전송을 위한 최적의 경로를 찾아 전송
 - 대표적인 프로토콜로는 **IP, ARP, RARP**가 있음
+  > **IP**
+  > Internet Protocol의 약자로, 인터넷을 통해 데이터를 보내고 받는 방법을 제어하는 일련의 규칙
+- IPv4(32bit, 약 43억개의 고유 주소 지원)와 IPv6(128bit) 두 가지 방식이 있음
+  > **ARP**
+  > 논리적 주소 체계인 IP를 물리적 주소 체계인 MAC(Media Access Control)간의 다리 역할을 하는 프로토콜
+- **브로드캐스트**(보내는 호스트가 전송한 데이터가 네트워크에 연결된 모든 호스트에 전송되는 방식)를 통해 IP 주소에 맞는 MAC 주소를 찾음
+- **유니캐스트**(고유 주소로 식별된 하나의 네트워크 목적지에 1:1로 데이터를 전송하는 방식)를 통해 IP 주소에 해당하는 MAC 주소를 줌
 
 ### 📍 3계층 - 전송 계층 (Transport Layer)
 
@@ -31,6 +38,23 @@
 - 데이터 단위는 `세그먼트`, 전송 주소는 `port`
 - 신뢰성 있는 데이터 전송을 담당
 - 대표적인 프로토콜로는 **TCP, UDP**가 있음
+  > **TCP**
+  > 인터넷상에서 데이터를 메시지의 형태로 보내기 위해 IP와 함꼐 사용하는 프로토콜로, **연속성보다 신뢰성 있는 전송이 중요할 때**에 사용
+- 연결 지향 방식으로 패킷 교환 방식을 사용
+- 3-way handshaking 과정을 통해 연결 설정, 4-way handshaking을 통해 해제
+- 흐름 제어 및 혼잡 제어
+- 높은 신뢰성 보장
+- UDP보다 속도가 느림
+- 전이중(Full-Duplex), 점대점(Point to Point)
+
+> **UDP**
+> 데이터를 데이터그램 단위로 처리하는 프로토콜로, **신뢰성보다는 연속성이 중요한 서비스**에 사용
+
+- 비연결형 서비스로 데이터그램 방식을 제공
+- 정보를 주고 받을 때 정보를 보내거나 받는다는 신호절차를 거치지 않음
+- UDP 헤더의 CheckSum 필드를 통해 최소한의 오류만 검출
+- 신뢰성이 낮음
+- TCP보다 속도가 빠름
 
 ### 📍 4계층 - 응용 계층 (Application Layer)
 
@@ -43,8 +67,8 @@
 
 ## 🗂️ 참고
 
-[혼자 공부하는 네트워크 – 네트워크 참조 모델
-https://www.youtube.com/watch?v=H1Z4tnzs-HA&list=PLVsNizTWUw7HfOCgvlfHIDPPo3TE-2iQM&index=9]
+[혼자 공부하는 네트워크 – 네트워크 참조 모델]
+https://www.youtube.com/watch?v=H1Z4tnzs-HA&list=PLVsNizTWUw7HfOCgvlfHIDPPo3TE-2iQM&index=9
 
 [TCP/IP 4계층에 대하여]
 https://velog.io/@dyunge_100/Network-TCPIP-4%EA%B3%84%EC%B8%B5%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC
