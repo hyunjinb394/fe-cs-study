@@ -9,10 +9,10 @@ since 2024.03.07
 사용하는 기술에 대한 이해를 높이고자 우리만의 기술 노트를 만들고 있습니다.📖
 
 ## Table of Contents
-### 🗒️CSS
-### [🗒️JavaScript](contents/JavaScript#readme)
-### [🗒️React](contents/React#readme)
-### 🗒️네트워크
+### [🗒️HTML & CSS](./contents/HTML&CSS/README.md)
+### [🗒️JavaScript](contents/JavaScript/README.md)
+### [🗒️React](contents/React/README.md)
+### [🗒️네트워크](./contents/Network/README.md)
 
 ## Collaborator
 | 배현진 | 양민정 | 전성혜 |
